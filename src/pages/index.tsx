@@ -13,7 +13,9 @@ type HomeProps = {
 
 const Home = ({ user }: HomeProps) => {
   const { name, email, image } = user;
-
+  const { data: session } = useSession();
+  console.log(session);
+  
   return (
     <div>
       <p>Bem vindo { name } - { email }</p>

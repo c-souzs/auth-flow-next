@@ -2,7 +2,7 @@ import { signIn } from "next-auth/react";
 
 const Login = () => {
     const handleLoginWithFacebook = () => {
-
+      signIn("facebook", { callbackUrl: '/' });
     }
 
     const handleLoginWithGoogle = () => {
