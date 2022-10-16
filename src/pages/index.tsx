@@ -1,6 +1,5 @@
 import type { GetServerSideProps } from 'next'
 import { unstable_getServerSession } from 'next-auth';
-import { useSession } from 'next-auth/react';
 import { authOptions } from './api/auth/[...nextauth]';
 
 type HomeProps = {
@@ -13,8 +12,6 @@ type HomeProps = {
 
 const Home = ({ user }: HomeProps) => {
   const { name, email, image } = user;
-  const { data: session } = useSession();
-  console.log(session);
   
   return (
     <div>

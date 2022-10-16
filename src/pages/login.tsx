@@ -6,7 +6,7 @@ const Login = () => {
     }
 
     const handleLoginWithGoogle = () => {
-        
+        signIn('google', { callbackUrl: '/' })
     }
 
     const handleLoginWithGithub = () => {
